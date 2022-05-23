@@ -52,7 +52,7 @@ export class SignupComponent implements OnInit {
       );
     }).then(() => {
 
-      this.router.navigateByUrl('/');
+      this.router.navigateByUrl('');
       this.toast.success('Sign up success');
     }).catch((error) => {
       console.log(error);
@@ -82,7 +82,5 @@ export class SignupComponent implements OnInit {
         })
       })
     ).subscribe();
-
   }
-
 }

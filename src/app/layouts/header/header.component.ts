@@ -29,10 +29,13 @@ export class HeaderComponent implements OnInit {
 
     try {
       
-      this.auth.signout();
-      this.router.navigateByUrl('signin');
+      this.auth.signout().then((res) => {
+        this.router.navigateByUrl('signin');
       this.toast.success("Log out success");
       this.email = null;
+      }).catch((err) => {
+        console.log(err);
+      });
 
     } catch (error) {
       

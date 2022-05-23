@@ -19,7 +19,7 @@ export class AuthService {
   }
 
   signout() {
-    this.auth.signOut();
+    return this.auth.signOut();
   }
 
   getUser() {
